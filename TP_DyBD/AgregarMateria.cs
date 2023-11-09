@@ -29,7 +29,7 @@ namespace TP_DyBD
             {
                 var cod = txt_cod_materia.Text.Trim();
                 var desc_m = txt_desc_materia.Text.Trim();
-                var desc_c = txt_desc_materia.Text.Trim();
+                var desc_c = txt_desc_carrera.Text.Trim();
                 var leg_p = cmb_nro_legajo_p.SelectedValue.ToString();
 
                 if (codSeleccionado == null)
@@ -95,6 +95,7 @@ namespace TP_DyBD
                 var desc_c = materia.Rows[0]["desc_carrera"].ToString();
                 var leg_p = materia.Rows[0]["nro_legajo_p"].ToString();
 
+                cmb_nro_legajo_p.SelectedValue = leg_p;
                 txt_cod_materia.Text = cod;
                 txt_desc_materia.Text = desc_m;
                 txt_desc_carrera.Text = desc_c;
